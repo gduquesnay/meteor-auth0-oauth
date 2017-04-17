@@ -67,6 +67,7 @@ Auth0.requestCredential = function(options, credentialRequestCompleteCallback) {
     '?response_type=code' +
     '&client_id=' + config.clientId +
     '&state=' + OAuth._stateParam(loginStyle, credentialToken) +
+    '&scope=offline_access' +
     // '&connection=facebook' +
     
     `&redirect_uri=${Meteor.absoluteUrl('_oauth/auth0')}`
